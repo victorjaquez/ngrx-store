@@ -1,4 +1,7 @@
+import { BlockChain } from './blockchain.model';
+import { AppState } from './../app.state';
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-blockchain',
@@ -7,7 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlockchainComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AppState>) { }
+
+  addCoin(name, price) {
+    this.store.dispatch({
+      type: 'ADD_COIN',
+      payload: <BlockChain> {
+        name: name,
+        price: price
+      }
+    });
+  }
 
   ngOnInit() {
   }
