@@ -6,11 +6,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BlockchainComponent } from './blockchain/blockchain.component';
+import { DisplayComponent } from './display/display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlockchainComponent
+    BlockchainComponent,
+    DisplayComponent
   ],
   imports: [
     BrowserModule,
