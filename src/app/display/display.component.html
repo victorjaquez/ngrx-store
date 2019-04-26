@@ -6,8 +6,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let coin of coins || async">
+    <tr *ngFor="let coin of coins | async">
       <td>{{ coin.name }}</td>
       <td>{{ coin.price }}</td>
     </tr>
   </tbody>
+</table>
