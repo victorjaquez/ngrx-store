@@ -22,6 +22,8 @@ export class BlockchainComponent implements OnInit {
     });
   }
 
+  // add coin function
+    // has action type and payload
   addCoin(name, price) {
     this.store.dispatch({
       type: 'ADD_COIN',

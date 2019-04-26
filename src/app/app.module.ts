@@ -16,7 +16,7 @@ import { DisplayComponent } from './display/display.component';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot({blockchain: addCoinReducer}),
+    StoreModule.forRoot({blockchain: addCoinReducer}), // passed reducer to the store
     ReactiveFormsModule
   ],
   providers: [],

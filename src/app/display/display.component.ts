@@ -10,8 +10,10 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
+  // subscribing to the store to fetch the data
   coins: Observable<Blockchain[]>;
 
+  // subscribing to the store to fetch the data
   constructor(private store: Store<AppState>) {
     this.coins = this.store.select(state => state.blockchain);
   }
